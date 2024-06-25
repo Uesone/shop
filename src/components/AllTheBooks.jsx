@@ -1,5 +1,3 @@
-// src/components/AllTheBooks.js
-
 import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
