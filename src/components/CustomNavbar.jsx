@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
-const CustomNavbar = () => {
+const customNavbar = () => {
       return (
         <>
           <Navbar bg="dark" data-bs-theme="dark">
