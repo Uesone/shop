@@ -7,7 +7,7 @@ const MyFooter = () => {
             <Container>
                 <Row>
                     <Col>
-                        <p>&copy; {new Date().getFullYear()} Sitobellissimo. All rights reserved.</p>
+                        <p>&copy; {new Date().getFullYear()} AppBellissima. All rights reserved.</p>
                     </Col>
                 </Row>
                 <Row>
