@@ -53,7 +53,7 @@ const AllTheBooks = () => {
         <option value="romance">Romance</option>
         <option value="scifi">Sci-Fi</option>
       </Form.Select>
-      <Row xs={1} md={2} lg={4} className="g-4">
+      <Row  xs={1} md={2} lg={4} className="g-4">
         {filteredBooks.map((book) => (
           <Col key={book.asin}>
             <Card className="h-100">
