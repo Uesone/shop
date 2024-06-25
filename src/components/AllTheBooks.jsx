@@ -1,3 +1,5 @@
+// src/components/AllTheBooks.js
+
 import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -56,10 +58,8 @@ const AllTheBooks = () => {
       <Row xs={1} md={2} lg={4} className="g-4">
         {filteredBooks.map((book) => (
           <Col key={book.asin}>
-            <Card className="h-100 book-card">
-              <div className="image-container">
-                <Card.Img variant="top" src={book.img} alt={book.title} className="book-img" />
-              </div>
+            <Card className="h-100">
+              <Card.Img variant="top" src={book.img} alt={book.title} className="book-img" />
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>
