@@ -1,47 +1,15 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import React from 'react';
+import { Nav, Navbar, Container, NavLink } from "react-bootstrap";
 
+const MyNav = props => (
+  <Navbar expand="lg" className="bg-body-tertiary">
+    <Container fluid="md">
+      <Nav className="mx-auto">
+        <NavLink href="#Home">Home</NavLink>
+        <NavLink href="#Home">About</NavLink>
+        <NavLink href="#Home">Browse</NavLink>
+      </Nav>
+    </Container>
+  </Navbar>
+);
 
-const customNavbar = () => {
-      return (
-        <>
-          <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-          <br />
-          <Navbar bg="primary" data-bs-theme="dark">
-            <Container>
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">About</Nav.Link>
-                <Nav.Link href="#pricing">Browse</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-    
-          <br />
-          <Navbar bg="light" data-bs-theme="light">
-            <Container>
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-        </>
-      );
-    }
-    
-    export default CustomNavbar;
+export default MyNav;
