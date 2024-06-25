@@ -41,7 +41,7 @@ const AllTheBooks = () => {
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">All The Books</h1>
+      <h1 className="mb-4">I Nostri Libri</h1>
       <Form.Select
         aria-label="Select category"
         onChange={handleCategoryChange}
