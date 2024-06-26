@@ -4,9 +4,22 @@ import "./App.css";
 import MyNav from "./components/MyNav";
 import MyFooter from "./components/MyFooter";
 import Welcome from "./components/Welcome";
-import BookContainer from "./components/BookContainer";
+import BookList from "./components/BookList";
+import fantasyBooks from "./data/fantasy.json";
+import historyBooks from "./data/history.json";
+import horrorBooks from "./data/horror.json";
+import romanceBooks from "./data/romance.json";
+import scifiBooks from "./data/scifi.json";
 
-function App() {
+const App = () => {
+  const allBooks = [
+    ...fantasyBooks,
+    ...historyBooks,
+    ...horrorBooks,
+    ...romanceBooks,
+    ...scifiBooks,
+  ];
+
   return (
     <div className="App">
       <header>
@@ -14,13 +27,16 @@ function App() {
       </header>
       <main>
         <Welcome />
-        <BookContainer />
+        <div className="container mt-5">
+          <h1 className="mb-4">I Nostri Libri</h1>
+          <BookList books={allBooks} />
+        </div>
       </main>
       <footer>
         <MyFooter />
       </footer>
     </div>
   );
-}
+};
 
 export default App;

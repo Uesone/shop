@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SingleBook from './SingleBook';
@@ -6,22 +6,15 @@ import SingleBook from './SingleBook';
 const BookList = ({ books }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    console.log('Books:', books);
-  }, [books]);
-
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
-    console.log('Search Term:', e.target.value);
   };
 
-  const filteredBooks = books.filter(book => {
+  const filteredBooks = books.filter((book) => {
     const lowerCaseTitle = book.title.toLowerCase();
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     return lowerCaseTitle.includes(lowerCaseSearchTerm);
   });
-
-  console.log('Filtered Books:', filteredBooks);
 
   return (
     <div>
