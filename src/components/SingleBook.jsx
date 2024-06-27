@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import './SingleBook.css';
+import CommentArea from './CommentArea';
 
 class SingleBook extends Component {
   constructor(props) {
@@ -16,6 +17,10 @@ class SingleBook extends Component {
     }));
   };
 
+  stopPropagation = (event) => {
+    event.stopPropagation();
+  };
+
   render() {
     const { book } = this.props;
     const { selected } = this.state;
@@ -29,6 +34,11 @@ class SingleBook extends Component {
             <strong>Price:</strong> ${book.price}<br />
             <strong>Category:</strong> {book.category}
           </Card.Text>
+          {selected && (
+            <div onClick={this.stopPropagation}>
+              <CommentArea bookId={book.asin} />
+            </div>
+          )}
         </Card.Body>
       </Card>
     );
